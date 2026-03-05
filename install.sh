@@ -25,7 +25,7 @@ paru -S helium-browser
 echo "Installing orbit (waybar module)"
 paru -S orbit-wifi
 
-echo "Setting Fish as default shell..."
+echo "Setting Bash as default shell..."
 chsh -s /bin/bash
 
 echo "Creating config directories..."
