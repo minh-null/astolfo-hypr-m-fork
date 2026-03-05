@@ -34,28 +34,10 @@ sudo mkdir -p /usr/share/backgrounds
 sudo cp assets/astolfo.png /usr/share/backgrounds/astolfo.png
 
 echo "Hyprpaper config..."
-cat > ~/.config/hypr/hyprpaper.conf <<EOF
-wallpaper {
-  monitor =
-  path = /usr/share/backgrounds/astolfo.png
-  fit_mode = cover
-}
-EOF
+cp hyprpaper.conf ~/.config/hypr/hyprpaper.conf
 
 echo "Hyprland config..."
-cat > ~/.config/hypr/hyprland.conf <<EOF
-monitor=,preferred,auto,1
-
-exec-once = hyprpaper
-exec-once = waybar
-exec-once = polkit-kde-authentication-agent-1
-
-bind = SUPER, RETURN, exec, kitty
-bind = SUPER, Q, killactive
-bind = SUPER, E, exec, rofi -show drun
-bind = SUPER, F, exec, librewolf
-bind = SUPER, M, exit
-EOF
+cp hyprland.conf ~/.config/hypr/hyprland.conf
 
 echo "Installing Waybar config..."
 cp waybar/config.jsonc ~/.config/waybar/config
